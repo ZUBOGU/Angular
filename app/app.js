@@ -4,7 +4,7 @@
   app.controller('StoreController', [ '$http', function($http){
     var store = this;
     store.products = [];
-    $http.get('/store-products.json').success(function(data) {
+    $http.get('//s3-us-west-1.amazonaws.com/angularjs-practice-zubo/app/store-products.json').success(function(data) {
       store.products = data;
     });
   }]);
